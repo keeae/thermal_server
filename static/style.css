@@ -1,0 +1,27 @@
+:root {
+  --bg: #0f1720;
+  --panel: #0b1220;
+  --accent: #00bfff;
+  --text: #e8eef6;
+}
+body{
+  margin:0; font-family:Segoe UI,Arial,sans-serif; background:var(--bg); color:var(--text);
+}
+header{display:flex;align-items:center;justify-content:space-between;padding:12px 20px;background:linear-gradient(90deg,#071124, #0b1a30);}
+header h1{margin:0;font-size:18px}
+.controls button, .controls select {margin-left:8px;padding:6px 10px;border-radius:6px;border:none;background:#123244;color:#fff;cursor:pointer}
+main{display:flex;gap:16px;padding:16px}
+.left{flex:1}
+.right{width:320px}
+.panel{background:var(--panel);padding:12px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.5)}
+#thermalImg{width:100%;max-width:860px;border-radius:6px;border:2px solid rgba(255,255,255,0.06)}
+.stats{background:#091018;padding:10px;border-radius:8px;margin-bottom:12px}
+.colorbar{background:#091018;padding:10px;border-radius:8px}
+.bar-gradient{height:24px;border-radius:4px;background:linear-gradient(to right,#00008b,#00bfff,#ffff00,#ff6a00,#8b0000)}
+.bar-labels{display:flex;justify-content:space-between;margin-top:6px;color:#bcd}
+.log{background:#071218;padding:8px;border-radius:8px;margin-top:12px;height:200px;overflow:auto}
+#logbox{font-size:12px;color:#aaa}
+@media (max-width:900px){
+  main{flex-direction:column}
+  .right{width:100%}
+}

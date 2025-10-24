@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Thermal Dashboard</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header>
+    <h1>Thermal Camera — Dashboard</h1>
+    <div class="controls">
+      <button id="btnFullscreen">ملء الشاشة</button>
+      <button id="btnSave">حفظ صورة</button>
+      <label>تحديث كل:
+        <select id="refreshInterval">
+          <option value="500">0.5s</option>
+          <option value="1000" selected>1s</option>
+          <option value="2000">2s</option>
+        </select>
+      </label>
+    </div>
+  </header>
+
+  <main>
+    <section class="left">
+      <div class="panel">
+        <img id="thermalImg" src="/image" alt="Thermal image">
+      </div>
+    </section>
+
+    <aside class="right">
+      <div class="stats">
+        <h3>القياسات</h3>
+        <p>Min: <span id="min">-</span> °C</p>
+        <p>Max: <span id="max">-</span> °C</p>
+        <p>Avg: <span id="avg">-</span> °C</p>
+      </div>
+
+      <div class="colorbar">
+        <div class="bar-gradient"></div>
+        <div class="bar-labels">
+          <span id="cb-max">—</span>
+          <span id="cb-mid">—</span>
+          <span id="cb-min">—</span>
+        </div>
+      </div>
+
+      <div class="log">
+        <h4>السجل</h4>
+        <div id="logbox"></div>
+      </div>
+    </aside>
+  </main>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>
